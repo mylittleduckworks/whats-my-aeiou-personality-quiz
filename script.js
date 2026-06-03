@@ -43,7 +43,7 @@ const traits = {
     compatibilityImage: "assets/optimising-compatibility.png",
     description: "You spot what can be smoother, faster, and better. You are great at refining systems until they work beautifully."
   },
-  "User Centricity": {
+  "User-Centricity": {
     letter: "U",
     represents: "Empathetic, Caring, Human-Focused",
     color: "#F8A6C1",
@@ -68,7 +68,7 @@ const personalityProfiles = {
     keyTraits: ["Curious", "Creative", "Explorative", "Bold"],
     strengths: ["Generates fresh concepts and approaches", "Encourages teams to move beyond safe ideas", "Finds unexpected solutions", "Makes innovation feel active and exciting"],
     growthAreas: ["Define what each experiment is trying to prove", "Avoid testing too many ideas at once", "Use evidence to decide what to keep", "Make experiments practical enough to implement"],
-    worksBestWith: ["Informed by Data", "User Centricity"],
+    worksBestWith: ["Informed by Data", "User-Centricity"],
     mayClashWith: ["Optimising"]
   },
   "Informed by Data": {
@@ -76,16 +76,16 @@ const personalityProfiles = {
     strengths: ["Reduces guessing in decision-making", "Helps teams justify design choices", "Turns messy information into direction", "Improves confidence in the final outcome"],
     growthAreas: ["Avoid waiting for perfect data", "Balance numbers with human stories", "Make insights easy for others to understand", "Leave room for intuition and creativity"],
     worksBestWith: ["Experimental", "Agility"],
-    mayClashWith: ["User Centricity"]
+    mayClashWith: ["User-Centricity"]
   },
   "Optimising": {
     keyTraits: ["Efficient", "Structured", "Refined", "Systematic"],
     strengths: ["Makes experiences feel easier and cleaner", "Finds ways to save time and effort", "Improves workflows and user journeys", "Turns rough ideas into polished solutions"],
     growthAreas: ["Avoid over-refining too early", "Leave space for messy exploration", "Do not focus only on efficiency", "Check whether improvements still meet user needs"],
-    worksBestWith: ["User Centricity", "Agility"],
+    worksBestWith: ["User-Centricity", "Agility"],
     mayClashWith: ["Experimental"]
   },
-  "User Centricity": {
+  "User-Centricity": {
     keyTraits: ["Empathetic", "Human-Centred", "Supportive", "Observant"],
     strengths: ["Makes solutions feel more human", "Keeps teams grounded in real needs", "Builds trust through thoughtful experiences", "Improves accessibility and emotional clarity"],
     growthAreas: ["Balance empathy with project constraints", "Use evidence to support user assumptions", "Avoid designing only for one user type", "Make user needs specific and actionable"],
@@ -95,16 +95,16 @@ const personalityProfiles = {
 };
 
 const questions = [
-  { question: "A project suddenly changes direction. What do you do first?", options: [{ text: "I quickly adjust and find a new path forward.", trait: "Agility" }, { text: "I test a fresh approach to see what works.", trait: "Experimental" }, { text: "I check the data to understand what changed.", trait: "Informed by Data" }, { text: "I ask how this affects the people using it.", trait: "User Centricity" }] },
-  { question: "What makes you most excited during a design challenge?", options: [{ text: "Trying something unexpected and seeing where it goes.", trait: "Experimental" }, { text: "Making the flow cleaner and more efficient.", trait: "Optimising" }, { text: "Finding real insights from research or numbers.", trait: "Informed by Data" }, { text: "Understanding what users truly need.", trait: "User Centricity" }] },
-  { question: "In a team, what role do you naturally take?", options: [{ text: "The flexible one who helps everyone pivot.", trait: "Agility" }, { text: "The curious one who suggests new experiments.", trait: "Experimental" }, { text: "The practical one who improves the process.", trait: "Optimising" }, { text: "The empathetic one who speaks for the user.", trait: "User Centricity" }] },
-  { question: "How do you decide what feature should come first?", options: [{ text: "I compare feedback, numbers, and evidence.", trait: "Informed by Data" }, { text: "I choose what removes the most friction.", trait: "Optimising" }, { text: "I pick what best supports user pain points.", trait: "User Centricity" }, { text: "I stay open and reprioritise when things change.", trait: "Agility" }] },
+  { question: "A project suddenly changes direction. What do you do first?", options: [{ text: "I quickly adjust and find a new path forward.", trait: "Agility" }, { text: "I test a fresh approach to see what works.", trait: "Experimental" }, { text: "I check the data to understand what changed.", trait: "Informed by Data" }, { text: "I ask how this affects the people using it.", trait: "User-Centricity" }] },
+  { question: "What makes you most excited during a design challenge?", options: [{ text: "Trying something unexpected and seeing where it goes.", trait: "Experimental" }, { text: "Making the flow cleaner and more efficient.", trait: "Optimising" }, { text: "Finding real insights from research or numbers.", trait: "Informed by Data" }, { text: "Understanding what users truly need.", trait: "User-Centricity" }] },
+  { question: "In a team, what role do you naturally take?", options: [{ text: "The flexible one who helps everyone pivot.", trait: "Agility" }, { text: "The curious one who suggests new experiments.", trait: "Experimental" }, { text: "The practical one who improves the process.", trait: "Optimising" }, { text: "The empathetic one who speaks for the user.", trait: "User-Centricity" }] },
+  { question: "How do you decide what feature should come first?", options: [{ text: "I compare feedback, numbers, and evidence.", trait: "Informed by Data" }, { text: "I choose what removes the most friction.", trait: "Optimising" }, { text: "I pick what best supports user pain points.", trait: "User-Centricity" }, { text: "I stay open and reprioritise when things change.", trait: "Agility" }] },
   { question: "When an idea fails, what is your reaction?", options: [{ text: "Great, now we know what to test next.", trait: "Experimental" }, { text: "Let’s improve the weak parts and try again.", trait: "Optimising" }, { text: "Let’s look at what the results are telling us.", trait: "Informed by Data" }, { text: "Let’s adapt quickly and keep moving.", trait: "Agility" }] },
-  { question: "What kind of feedback feels most useful to you?", options: [{ text: "Direct user stories and emotional reactions.", trait: "User Centricity" }, { text: "Clear metrics that show what improved.", trait: "Informed by Data" }, { text: "Suggestions that help simplify the experience.", trait: "Optimising" }, { text: "New possibilities I have not explored yet.", trait: "Experimental" }] },
-  { question: "You have limited time before a deadline. What do you focus on?", options: [{ text: "Adapting the plan so we can still deliver well.", trait: "Agility" }, { text: "Prioritising the highest-impact improvements.", trait: "Optimising" }, { text: "Checking evidence so we avoid guessing.", trait: "Informed by Data" }, { text: "Making sure the user journey still makes sense.", trait: "User Centricity" }] },
-  { question: "What would you rather be known for?", options: [{ text: "Being brave enough to try new things.", trait: "Experimental" }, { text: "Being fast and adaptable under pressure.", trait: "Agility" }, { text: "Making systems feel smooth and effortless.", trait: "Optimising" }, { text: "Making people feel understood and supported.", trait: "User Centricity" }] },
-  { question: "What do you usually notice first in an app or service?", options: [{ text: "Where the journey feels confusing for users.", trait: "User Centricity" }, { text: "Where the system could be more efficient.", trait: "Optimising" }, { text: "What data could prove whether it works.", trait: "Informed by Data" }, { text: "What new interaction could make it more exciting.", trait: "Experimental" }] },
-  { question: "Pick the phrase that sounds most like you.", options: [{ text: "Let’s move, adjust, and keep learning.", trait: "Agility" }, { text: "Let’s test it and see what happens.", trait: "Experimental" }, { text: "Let’s check the evidence first.", trait: "Informed by Data" }, { text: "Let’s make this easier for people.", trait: "User Centricity" }] }
+  { question: "What kind of feedback feels most useful to you?", options: [{ text: "Direct user stories and emotional reactions.", trait: "User-Centricity" }, { text: "Clear metrics that show what improved.", trait: "Informed by Data" }, { text: "Suggestions that help simplify the experience.", trait: "Optimising" }, { text: "New possibilities I have not explored yet.", trait: "Experimental" }] },
+  { question: "You have limited time before a deadline. What do you focus on?", options: [{ text: "Adapting the plan so we can still deliver well.", trait: "Agility" }, { text: "Prioritising the highest-impact improvements.", trait: "Optimising" }, { text: "Checking evidence so we avoid guessing.", trait: "Informed by Data" }, { text: "Making sure the user journey still makes sense.", trait: "User-Centricity" }] },
+  { question: "What would you rather be known for?", options: [{ text: "Being brave enough to try new things.", trait: "Experimental" }, { text: "Being fast and adaptable under pressure.", trait: "Agility" }, { text: "Making systems feel smooth and effortless.", trait: "Optimising" }, { text: "Making people feel understood and supported.", trait: "User-Centricity" }] },
+  { question: "What do you usually notice first in an app or service?", options: [{ text: "Where the journey feels confusing for users.", trait: "User-Centricity" }, { text: "Where the system could be more efficient.", trait: "Optimising" }, { text: "What data could prove whether it works.", trait: "Informed by Data" }, { text: "What new interaction could make it more exciting.", trait: "Experimental" }] },
+  { question: "Pick the phrase that sounds most like you.", options: [{ text: "Let’s move, adjust, and keep learning.", trait: "Agility" }, { text: "Let’s test it and see what happens.", trait: "Experimental" }, { text: "Let’s check the evidence first.", trait: "Informed by Data" }, { text: "Let’s make this easier for people.", trait: "User-Centricity" }] }
 ];
 
 let currentQuestion = 0;
